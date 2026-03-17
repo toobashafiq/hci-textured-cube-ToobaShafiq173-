@@ -17,27 +17,27 @@ function TexturedCube() {
     mountRef.current.appendChild(renderer.domElement);
 
     const loader = new THREE.TextureLoader();
+    const base = import.meta.env.BASE_URL; // ✅ ensures correct path on Vercel
 
-    // 6 unique images for 6 faces
+    // 6 unique images for 6 faces (place inside public/textures/)
     const materials = [
-      new THREE.MeshBasicMaterial({ map: loader.load("/batch.jpeg") }),
-      new THREE.MeshBasicMaterial({ map: loader.load("/logo.jpeg") }),
-      new THREE.MeshBasicMaterial({ map: loader.load("/name.jpeg") }),
-      new THREE.MeshBasicMaterial({ map: loader.load("/seatno.jpeg") }),
-      new THREE.MeshBasicMaterial({ map: loader.load("/ubit.jpeg") }),
-      new THREE.MeshBasicMaterial({ map: loader.load("/uni.jpeg") }),
+      new THREE.MeshBasicMaterial({ map: loader.load(`${base}textures/batch.jpeg`) }),
+      new THREE.MeshBasicMaterial({ map: loader.load(`${base}textures/logo.jpeg`) }),
+      new THREE.MeshBasicMaterial({ map: loader.load(`${base}textures/name.jpeg`) }),
+      new THREE.MeshBasicMaterial({ map: loader.load(`${base}textures/seatno.jpeg`) }),
+      new THREE.MeshBasicMaterial({ map: loader.load(`${base}textures/ubit.jpeg`) }),
+      new THREE.MeshBasicMaterial({ map: loader.load(`${base}textures/uni.jpeg`) }),
     ];
 
-   // Cube size increased
-const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(3, 3, 3), // width, height, depth
-  materials
-);
-scene.add(cube);
+    // Cube size
+    const cube = new THREE.Mesh(
+      new THREE.BoxGeometry(3, 3, 3),
+      materials
+    );
+    scene.add(cube);
 
-// Camera thoda peeche kar diya taake cube clearly visible ho
-camera.position.z = 7;
-
+    // Camera position
+    camera.position.z = 7;
 
     const animate = () => {
       requestAnimationFrame(animate);
