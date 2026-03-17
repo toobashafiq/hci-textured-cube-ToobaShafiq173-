@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interaction Analysis – Norman vs GOMS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: #111111;
+    }
+    header, footer {
+      background-color: #f4f4f4;
+      color: #1a237e;
+    }
+    h1, h2, h3 {
+      color: #1a237e;
+    }
+    nav a {
+      color: #283593;
+      font-size: 16px;
+    }
+    nav a[aria-current="page"] {
+      color: #1a237e;
+    }
+    table {
+      font-size: 14px;
+    }
+    thead {
+      background-color: #f4f4f4;
+    }
+    th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #1a237e;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    .note {
+      background-color: #f9f9f9;
+      font-size: 15px;
+      color: #111111;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Interaction Analysis</h1>
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html" aria-current="page">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="who-paid.html">Who Paid Task</a></li>
+      <li><a href="ui-evaluation.html">UI Evaluation</a></li>
+      <li><a href="html_errors.html">HTML Errors</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Purpose of the Analysis</h2>
+    <p>
+      This page compares Norman’s Action Cycle, the GOMS model, and KLM (Keystroke-Level Model) 
+      using practical examples to highlight differences in cognitive processing, task execution, 
+      and feedback. All examples are based on Dix et al., <em>Human–Computer Interaction</em>, Chapters 9 and 12.
+    </p>
+  </section>
+
+  <!-- Example 1: Wi-Fi -->
+  <section>
+    <h2>Example 1: Enabling Wi-Fi on a Smartphone</h2>
+
+    <img src="WifiTask.jpg" alt="Norman’s Action Cycle vs GOMS – Wi-Fi Toggle Task">
+
+    <table>
+     <caption>Wi-Fi Toggle Task – Norman vs GOMS Comparison</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Stage</th>
+          <th scope="col">User Action</th>
+          <th scope="col">GOMS / KLM Interpretation</th>
+          <th scope="col">Analysis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Goal</th>
+          <td>User intends to turn Wi-Fi ON to access the internet</td>
+          <td>Goal = Enable Wi-Fi</td>
+          <td>✅ Both models agree on objective; Norman frames cognitively, GOMS structurally</td>
+        </tr>
+        <tr>
+          <th scope="row">Plan / Decision</th>
+          <td>User chooses Quick Settings / Control Center instead of full Settings</td>
+          <td>Method = Swipe down → Tap Wi-Fi toggle; optional selection rules if multiple methods exist</td>
+          <td>🟡 Norman emphasizes mental decision; GOMS focuses on method selection</td>
+        </tr>
+        <tr>
+          <th scope="row">Target Identification</th>
+          <td>User visually locates Wi-Fi icon among toggles</td>
+          <td>Not explicitly modeled; may correspond to KLM [M]</td>
+          <td>⚠️ Norman models perception; GOMS assumes target already known</td>
+        </tr>
+        <tr>
+          <th scope="row">Execute</th>
+          <td>User taps the Wi-Fi toggle</td>
+          <td>Operator = Tap; KLM sequence: M → P → K</td>
+          <td>✅ Both models capture physical action; timing measurable in KLM</td>
+        </tr>
+        <tr>
+          <th scope="row">Feedback / Evaluate</th>
+          <td>User sees icon color change and confirms connection</td>
+          <td>Feedback assumed, not modeled</td>
+          <td>❌ Norman addresses Gulf of Evaluation; GOMS ignores perception</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <aside class ="note">
+      <h3>Key Insights</h3>
+      <ul>
+        <li>Norman emphasizes cognition, decision-making, visual search, and feedback.</li>
+        <li>GOMS/KLM emphasizes structured task execution and timing.</li>
+        <li>Execution step is common to both models.</li>
+        <li>Feedback and perception are unique to Norman and abstracted or ignored in GOMS.</li>
+      </ul>
+      <p><strong>Exam Takeaway:</strong> Norman explains how users understand and evaluate actions, while GOMS/KLM focuses on efficiency and timing.</p>
+    </aside>
+  </section>
+
+  <!-- Example 2: Syringe -->
+  <section>
+    <h2>Example 2: Automatic Syringe Dose Calculator</h2>
+
+    <img src="AutomaticSyringe.jpg" alt="Automatic Syringe">
+
+    <table>
+      <caption>Norman’s Action Cycle – Bad vs Good Design (Syringe Task)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Stage</th>
+          <th scope="col">User Action / Interaction</th>
+          <th scope="col">Design Interpretation</th>
+          <th scope="col">Analysis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Goal</th>
+          <td>User wants to enter dosage quickly and safely</td>
+          <td>
+            <p>Bad: Enter dosage without guidance</p>
+            <p>Good: Clear, step-by-step input layout</p>
+          </td>
+          <td>✅ Good design gives clear objective; bad design increases cognitive load</td>
+        </tr>
+        <tr>
+          <th scope="row">Plan / Decision</th>
+          <td>User decides how to input dosage</td>
+          <td>
+            <p>Bad: Confusing keypad layout</p>
+            <p>Good: Logical numeric layout, easy to plan input</p>
+          </td>
+          <td>🟡 Good design reduces mental effort; bad design requires more cognitive processing</td>
+        </tr>
+        <tr>
+          <th scope="row">Target Identification</th>
+          <td>User locates number keys on syringe keypad</td>
+          <td>
+            <p>Bad: Keys hard to differentiate</p>
+            <p>Good: Keys visually distinct and clearly labeled</p>
+          </td>
+          <td>⚠️ Good design improves perception; bad design increases error likelihood</td>
+        </tr>
+        <tr>
+          <th scope="row">Execute</th>
+          <td>User presses keys to enter dosage</td>
+          <td>
+            <p>Bad: Input errors frequent</p>
+            <p>Good: Accurate and efficient input</p>
+          </td>
+          <td>✅ Execution smoother in good design; bad design leads to mistakes</td>
+        </tr>
+        <tr>
+          <th scope="row">Feedback / Evaluate</th>
+          <td>User verifies dosage and confirms</td>
+          <td>
+            <p>Bad: Unclear or delayed feedback</p>
+            <p>Good: Immediate confirmation of dosage entered</p>
+          </td>
+          <td>❌ Strong feedback closes evaluation gulf; weak feedback increases error risk</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <aside class="note">
+      <h3>Key Insights</h3>
+      <ul>
+        <li>Good design reduces cognitive effort and improves perception.</li>
+        <li>Execution errors are minimized with clear layouts and feedback.</li>
+        <li>Norman’s stages help identify where poor design affects user performance.</li>
+        <li>Exam Takeaway: Clear design, feedback, and mapping reduce errors and improve usability.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- Example 3: Water Dispenser -->
+  <section>
+    <h2>Example 3: Using a Water Dispenser (Button-Based)</h2>
+
+    <img src="WaterDispenser.jpg" alt="Water Dispenser Button Interaction">
+
+    <table>
+      <caption>Norman’s Action Cycle vs GOMS – Water Dispenser Button Task</caption>
+      <thead>
+        <tr>
+          <th scope="col">Stage</th>
+          <th scope="col">User Action</th>
+          <th scope="col">GOMS / KLM Interpretation</th>
+          <th scope="col">Analysis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Goal</th>
+          <td>User wants to fill a cup with water</td>
+          <td>Goal = Get water</td>
+          <td>✅ Both models clearly define the objective</td>
+        </tr>
+        <tr>
+          <th scope="row">Plan / Decision</th>
+          <td>User decides to press the dispenser button</td>
+          <td>Method = Hold cup → Press button</td>
+          <td>🟡 Norman highlights intention; GOMS defines task method</td>
+        </tr>
+        <tr>
+          <th scope="row">Target Identification</th>
+          <td>User visually locates the water button</td>
+          <td>Not explicitly modeled; assumed known</td>
+          <td>⚠️ Norman models perception; GOMS assumes button is visible</td>
+        </tr>
+        <tr>
+          <th scope="row">Execute</th>
+          <td>User presses and holds the button</td>
+          <td>Operator = Press; KLM: M → P → K</td>
+          <td>✅ Physical action captured well by both models</td>
+        </tr>
+        <tr>
+          <th scope="row">Feedback / Evaluate</th>
+          <td>User sees water flowing and releases button when cup is full</td>
+          <td>Feedback assumed, not detailed</td>
+          <td>❌ Norman explains feedback; GOMS ignores evaluation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <aside class="note">
+      <h3>Key Insights</h3>
+      <ul>
+        <li>Norman’s model captures user intention, perception, and feedback.</li>
+        <li>GOMS/KLM focuses on physical steps and efficiency.</li>
+        <li>Button-based interaction reduces ambiguity compared to sensor-based systems.</li>
+        <li><strong>Exam Takeaway:</strong> Norman explains usability; GOMS/KLM explains performance.</li>
+      </ul>
+    </aside>
+  </section>
+
+</main>
+
+<footer>
+  <p>Based on Dix et al., <em>Human–Computer Interaction</em>, Chapters 9 and 12.</p>
+  <p><a href="index.html" title="Return to Home page">Back to Home</a></p>
+</footer>
+
+</body>
+</html>

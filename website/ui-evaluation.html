@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UI Design Evaluation – Lab 01</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;  
+      font-size: 16px;                
+      color: #111;                     
+      background-color: #fff;         
+    }
+    header, footer {
+      background-color: #f4f4f4;      
+      color: #1a237e;                
+    }
+    h1, h2, h3 {
+      color: #1a237e;                 
+    }
+    nav a {
+      color: #283593;                
+      font-size: 16px;                
+    }
+    nav a[aria-current="page"] {
+      color: #1a237e;               
+    }
+    table {
+      font-family: Arial, sans-serif; 
+      font-size: 14px;                
+      background-color: #fff;         
+      
+    }
+    th {
+      background-color: #f4f4f4;    
+      color: #1a237e; 
+    }               
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;      
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>UI DESIGN EVALUATION</h1>
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+       <li><a href="who-paid.html">Who Paid Task</a></li>
+      <li><a href="ui-evaluation.html" aria-current="page">UI Evaluation</a></li>
+      <li><a href="html_errors.html">HTML Errors</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section>
+  <h2>Introduction</h2>
+  <p>This page shows how good and bad UI designs affect user performance and cognitive load, evaluated using Norman's Action Cycle, GOMS, and KLM (Dix et al., Ch. 9 & 12).</p>
+</section>
+
+<section>
+  <h2>Example 1: Login Form</h2>
+  <img src="Login.jpg" alt="Login Form">
+  <table>
+    <caption>Norman's Action Cycle – Login Task (Bad vs Good Design)</caption>
+    <thead>
+      <tr>
+        <th scope="col">Stage</th>
+        <th scope="col">Bad Design</th>
+        <th scope="col">Good Design</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Goal</th>
+        <td>Login quickly</td>
+        <td>Login quickly</td>
+      </tr>
+      <tr>
+        <th scope="row">Form Intention</th>
+        <td>Confusing labels, unclear tab order</td>
+        <td>Clear labels, logical tab order</td>
+      </tr>
+      <tr>
+        <th scope="row">Specify Action Sequence</th>
+        <td>Guess input order</td>
+        <td>Follow labels, auto-focus first field</td>
+      </tr>
+      <tr>
+        <th scope="row">Execute</th>
+        <td>Frequent typing errors</td>
+        <td>Typing accurate with cues</td>
+      </tr>
+      <tr>
+        <th scope="row">Perceive System State</th>
+        <td>No feedback on errors</td>
+        <td>Immediate feedback on incorrect password</td>
+      </tr>
+      <tr>
+        <th scope="row">Interpret System State</th>
+        <td>User unsure if login failed</td>
+        <td>User understands errors immediately</td>
+      </tr>
+      <tr>
+        <th scope="row">Evaluate</th>
+        <td>Multiple retries, frustration</td>
+        <td>Quick successful login; reduced cognitive load</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Example 2: Payment / Checkout Form</h2>
+   <img src="Checkout.jpg" alt="Checkout Form">
+  <table>
+    <caption>Norman's Action Cycle – Payment Task (Bad vs Good Design)</caption>
+    <thead>
+      <tr>
+        <th scope="col">Stage</th>
+        <th scope="col">Bad Design</th>
+        <th scope="col">Good Design</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Goal</th>
+        <td>Complete payment</td>
+        <td>Complete payment</td>
+      </tr>
+      <tr>
+        <th scope="row">Form Intention</th>
+        <td>Long form, unclear labels</td>
+        <td>Short form, clear labels, grouped fields</td>
+      </tr>
+      <tr>
+        <th scope="row">Specify Action Sequence</th>
+        <td>Random input order</td>
+        <td>Logical flow: card → expiry → CVV → confirm</td>
+      </tr>
+      <tr>
+        <th scope="row">Execute</th>
+        <td>Typing errors, mis-clicks</td>
+        <td>Smooth input with focus & validation</td>
+      </tr>
+      <tr>
+        <th scope="row">Perceive System State</th>
+        <td>Payment confirmation delayed</td>
+        <td>Immediate confirmation, visual feedback</td>
+      </tr>
+      <tr>
+        <th scope="row">Interpret System State</th>
+        <td>User unsure of success</td>
+        <td>User understands outcome clearly</td>
+      </tr>
+      <tr>
+        <th scope="row">Evaluate</th>
+        <td>Errors may require repeating process</td>
+        <td>Efficient, fewer errors, reduced cognitive load</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Example 3: Add Expense Option</h2>
+   <img src="AddExpenses.jpg" alt="Add Expense Form">
+  <table>
+    <caption>Norman's Action Cycle – Add Expense Task (Bad vs Good Design)</caption>
+    <thead>
+      <tr>
+        <th scope="col">Stage</th>
+        <th scope="col">Bad Design</th>
+        <th scope="col">Good Design</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Goal</th>
+        <td>Add expense quickly</td>
+        <td>Add expense quickly</td>
+      </tr>
+      <tr>
+        <th scope="row">Form Intention</th>
+        <td>Confusing labels, unclear fields, too many steps</td>
+        <td>Clear labels, grouped fields, minimal steps</td>
+      </tr>
+      <tr>
+        <th scope="row">Specify Action Sequence</th>
+        <td>User guesses input order (amount, date, category)</td>
+        <td>Logical input flow: amount → category → date → payer selection</td>
+      </tr>
+      <tr>
+        <th scope="row">Execute</th>
+        <td>Typing errors, mis-clicks, selecting wrong payer</td>
+        <td>Smooth input with auto-focus, dropdowns for category and payer</td>
+      </tr>
+      <tr>
+        <th scope="row">Perceive System State</th>
+        <td>No confirmation; user unsure if expense added</td>
+        <td>Immediate visual feedback: expense added, highlighted in list</td>
+      </tr>
+      <tr>
+        <th scope="row">Interpret System State</th>
+        <td>User unsure if entry is correct</td>
+        <td>User can verify expense instantly; clearly sees payer, amount, date</td>
+      </tr>
+      <tr>
+        <th scope="row">Evaluate</th>
+        <td>May need to re-enter expense, frustration</td>
+        <td>Task completed efficiently with reduced cognitive load and errors</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 HCI Lab 01 – UI Design Evaluation</p>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>

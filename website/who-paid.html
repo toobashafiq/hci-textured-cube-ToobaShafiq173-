@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Who Paid Problem – Norman vs GOMS & KLM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: #111111;
+    }
+    header, footer {
+      background-color: #f4f4f4;
+      color: #1a237e;
+    }
+    h1, h2, h3 {
+      color: #1a237e;
+    }
+    nav a {
+      color: #283593;
+      font-size: 16px;
+    }
+    nav a[aria-current="page"] {
+      color: #1a237e;
+    }
+    table {
+      font-size: 14px;
+    }
+    thead {
+      background-color: #f4f4f4;
+    }
+    th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #1a237e;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    .note {
+      background-color: #f9f9f9;
+      font-size: 15px;
+      color: #111111;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>WHO PAID PROBLEM</h1>
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="who-paid.html" aria-current="page">Who Paid Task</a></li>
+      <li><a href="ui-evaluation.html">UI Evaluation</a></li>
+      <li><a href="html_errors.html">HTML Errors</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section>
+  <h2>Task Scenario</h2>
+  <p>
+    A group of friends shares expenses during a meal. Each person sometimes pays the total bill. 
+    The task is to identify who paid each expense accurately and efficiently.
+  </p>
+</section>
+
+<section>
+  <h2>Norman, GOMS & KLM – Who Paid Task Analysis</h2>
+
+  <table>
+    <caption>Who Paid Task – Norman, GOMS & KLM Integrated Analysis</caption>
+    <thead>
+      <tr>
+        <th scope="col">Stage</th>
+        <th scope="col">User Action</th>
+        <th scope="col">Norman</th>
+        <th scope="col">GOMS / KLM Interpretation</th>
+        <th scope="col">Analysis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Goal</th>
+        <td>User wants to know who paid the bill</td>
+        <td>Form Goal – User defines intention to identify payer</td>
+        <td>Goal = Identify payer</td>
+        <td>✅ All models align; Norman focuses on cognition, GOMS defines task goal</td>
+      </tr>
+      <tr>
+        <th scope="row">Plan / Decision</th>
+        <td>User decides to check app or receipt</td>
+        <td>Form Intention – Decide how to obtain payment information</td>
+        <td>Method selection – Open record then select expense</td>
+        <td>🟡 Norman highlights mental planning; GOMS emphasizes method choice</td>
+      </tr>
+      <tr>
+        <th scope="row">Target Identification</th>
+        <td>User visually searches for correct expense or person</td>
+        <td>Specify Action – Decide which item to select</td>
+        <td>KLM Mental operator [M] for visual search</td>
+        <td>⚠️ Norman models perception; GOMS assumes target is already known</td>
+      </tr>
+      <tr>
+        <th scope="row">Execute</th>
+        <td>User selects the expense entry</td>
+        <td>Execute Action – Perform selection</td>
+        <td>Operator = Tap; KLM sequence M → P → K</td>
+        <td>✅ Physical action captured clearly; time measurable using KLM</td>
+      </tr>
+      <tr>
+        <th scope="row">Perceive</th>
+        <td>User reads payer name and amount</td>
+        <td>Perceive System State – Observe displayed information</td>
+        <td>KLM Read operator [R]</td>
+        <td>Norman explicitly models perception; GOMS treats it implicitly</td>
+      </tr>
+      <tr>
+        <th scope="row">Interpret</th>
+        <td>User compares shown payer with memory or expectation</td>
+        <td>Interpret System State – Make sense of information</td>
+        <td>Mental operators – Recall and Compare</td>
+        <td>Strong overlap between Norman cognition and KLM mental actions</td>
+      </tr>
+      <tr>
+        <th scope="row">Evaluate / Feedback</th>
+        <td>User confirms who paid</td>
+        <td>Evaluate Outcome – Check if goal is achieved</td>
+        <td>Feedback not explicitly modeled</td>
+        <td>Norman addresses Gulf of Evaluation; GOMS/KLM largely ignore feedback</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <aside class="note">
+    <h3>Key Insights</h3>
+    <ul>
+      <li>Norman explains user cognition, intention, perception, and feedback.</li>
+      <li>GOMS structures the task into goals, methods, and operators.</li>
+      <li>KLM estimates time for expert, error-free interactions.</li>
+    </ul>
+  </aside>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 HCI Lab 01 – Who Paid Problem</p>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>

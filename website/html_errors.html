@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Errors – Lab 01</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: #111111;
+    }
+
+    header, footer {
+      background-color: #f4f4f4;
+      color: #1a237e;
+    }
+
+    h1, h2, h3 {
+      color: #1a237e;
+    }
+
+    nav a {
+      color: #283593;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+      color: #1a237e;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+    }
+
+    .wrong {
+      color: red;
+    }
+
+    .correct {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>HTML Errors Demonstration</h1>
+  <nav aria-label="Primary navigation">
+    
+    <ul> 
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+        <li><a href="who-paid.html">Who Paid Task</a></li>
+      <li><a href="ui-evaluation.html">UI Evaluation</a></li>
+	  <li><a href="html_errors.html"aria-current="page">HTML Errors</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>10 Common HTML Mistakes</h2>
+
+    <article>
+      <h3>1. Missing Closing Tag</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;p&gt;This is a paragraph</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>2. Improper Nesting</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;ul&gt;&lt;li&gt;Item 1&lt;p&gt;Item 2&lt;/li&gt;&lt;/ul&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;/ul&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>3. Deprecated Tag</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;font color="red"&gt;Text&lt;/font&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;span style="color:red"&gt;Text&lt;/span&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>4. Invalid Attribute</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;img src="image.jpg" altt="description"&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;img src="image.jpg" alt="description"&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>5. Missing Alt Text</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;img src="photo.jpg"&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;img src="photo.jpg" alt="Photo description"&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>6. Excessive Inline Styles</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;h1 style="color:blue; font-size:24px"&gt;Title&lt;/h1&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;h1 class="title"&gt;Title&lt;/h1&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>7. Missing Doctype</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;html lang="en"&gt; ... &lt;/html&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; ... &lt;/html&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>8. Non-Semantic Structure</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;div&gt;&lt;b&gt;Header&lt;/b&gt;&lt;/div&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;header&gt;&lt;h1&gt;Header&lt;/h1&gt;&lt;/header&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>9. Broken Link</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;a href="nonexistent.html"&gt;Click&lt;/a&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;a href="index.html"&gt;Home&lt;/a&gt;</code></pre>
+    </article>
+
+    <article>
+      <h3>10. Empty List Items</h3>
+      <pre><strong>Wrong:</strong> <code class="wrong">&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</code></pre>
+      <pre><strong>Correct:</strong> <code class="correct">&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;/ul&gt;</code></pre>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 HCI Lab 01 – HTML Errors Demonstration</p>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>

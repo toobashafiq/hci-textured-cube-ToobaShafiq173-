@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Norman – GOMS – KLM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111111;
+      font-size: 16px;
+    }
+
+    header, footer {
+      background-color: #f4f4f4;
+      color: #1a237e;
+    }
+
+    h1, h2, h3 {
+      color: #1a237e;
+    }
+
+    p, li {
+      color: #111111;
+    }
+
+    a {
+      color: #283593;
+    }
+
+    nav a {
+      color: #283593;
+    }
+
+    nav a[aria-current="page"] {
+      color: #1a237e;
+    }
+
+    table {
+      font-size: 14px;
+    }
+
+    thead {
+      background-color: #f4f4f4;
+    }
+
+    th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #1a237e;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Norman, GOMS, and KLM</h1>
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
+      <li><a href="who-paid.html">Who Paid Task</a></li>
+      <li><a href="ui-evaluation.html">UI Evaluation</a></li>
+      <li><a href="html_errors.html">HTML Errors</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Model-Based Evaluation</h2>
+    <p>
+      In Human–Computer Interaction, different cognitive models are used
+      to analyse user behaviour. Each model focuses on a different level
+      of interaction, such as understanding user thinking, task structure,
+      or execution speed.
+    </p>
+  </section>
+
+  <section>
+    <h2>Norman vs GOMS vs KLM</h2>
+    <table>
+      <caption>Comparison of Interaction Models</caption>
+      <thead>
+        <tr>
+          <th scope="col">Model</th>
+          <th scope="col">Type</th>
+          <th scope="col">Main Purpose</th>
+          <th scope="col">Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Norman</th>
+          <td>Descriptive</td>
+          <td>Explains how users form goals, act, and evaluate feedback</td>
+          <td>Identifies usability problems</td>
+        </tr>
+        <tr>
+          <th scope="row">GOMS</th>
+          <td>Analytical</td>
+          <td>Describes task steps for skilled users</td>
+          <td>Compares task efficiency</td>
+        </tr>
+        <tr>
+          <th scope="row">KLM</th>
+          <td>Quantitative</td>
+          <td>Breaks actions into physical operators</td>
+          <td>Estimates execution time</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Norman’s Action Cycle</h2>
+    <img src="NormanActionCycle.jpg" alt="Norman’s seven-stage action cycle">
+    <p>
+      Norman’s model focuses on the mental process of interaction.
+      It explains how users decide what to do, perform actions,
+      and check whether the system response matches their goal.
+    </p>
+    <ul>
+      <li><strong>Establishing the goal:</strong> This is the user’s notion of what needs to be done and is framed in terms of the domain, in the task language.</li>
+      <li><strong>Forming the intention:</strong> The goal is translated into the more specific intention to reach the goal.</li>
+      <li><strong>Specifying the action sequence:</strong> The intention is translated into the actual actions that will reach the goal, before it can be executed by the user.</li>
+      <li><strong>Executing the action:</strong> The user performs the physical action sequence to interact with the system.</li>
+      <li><strong>Perceiving the system state:</strong> The user perceives the new state of the system, after execution of the action sequence.</li>
+      <li><strong>Interpreting the system state:</strong> The user interprets the perceived state in terms of his expectations.</li>
+      <li><strong>Evaluating the system state with respect to the goals and intentions:</strong> The user evaluates the new state according to the original goals to see if the interaction has been successful.</li>
+    </ul>
+    <p>
+      The model highlights two common problems:
+      The gulf of execution 
+      (the difference between the user’s formulation of the actions to reach the goal 
+      and the actions allowed by the system) and the gulf of evaluation (the distance 
+      between the physical presentation of the system state and the expectation of the user).
+    </p>
+  </section>
+
+  <section>
+    <h2>GOMS Model</h2>
+    <img src="GOMS-model.png" alt="The GOMS Model">
+    <p>
+      GOMS describes how an experienced user completes a task,
+      focusing on the structure of actions.
+    </p>
+    <ul>
+      <li><strong>Goals:</strong> The user’s objectives, and points to return for evaluation or error recovery.</li>
+      <li><strong>Operators:</strong> Basic actions affecting system or mental state.</li>
+      <li><strong>Methods:</strong> Procedures to achieve goals, decomposed into subgoals.</li>
+      <li><strong>Selection Rules:</strong> How the user chooses between methods when multiple exist.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Keystroke-Level Model (KLM)</h2>
+    <img src="KLM-Model.jpg" alt="The KLM Model">
+    <ul>
+      <li>K: Keystroking</li>
+      <li>B: Mouse button press</li>
+      <li>P: Pointing with mouse</li>
+      <li>H: Homing hands</li>
+      <li>D: Drawing lines</li>
+      <li>M: Mental preparation</li>
+      <li>R: System response</li>
+    </ul>
+
+    <table>
+      <caption>Times for KLM operators</caption>
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Remarks</th>
+          <th>Time (s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>K</td>
+          <td>Press key (good typist 90 wpm)</td>
+          <td>0.12</td>
+        </tr>
+        <tr>
+          <td>K</td>
+          <td>Press key (poor typist 40 wpm)</td>
+          <td>0.28</td>
+        </tr>
+        <tr>
+          <td>K</td>
+          <td>Press key (non-typist)</td>
+          <td>1.20</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>Mouse button press – down/up</td>
+          <td>0.10</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>Mouse button press – click</td>
+          <td>0.20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    Content developed for Lab 01 based on Dix et al., <em>Human–Computer Interaction</em>.
+  </p>
+  <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>
